@@ -1,1 +1,42 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<VebProdavnica>
+  <Proizvod>
+    <Kategorija>laptopovi</Kategorija>
+    <Cena valuta="RSD">
+      <iznos>56369.23</iznos>
+    </Cena>
+    <Oglas>
+      <TekstOglasa>TekstOglasa1</TekstOglasa>
+      <Tag>Računar</Tag>
+      <Tag>Tehnika</Tag>
+      <Tag>Samsung</Tag>
+    </Oglas>
+    <Akcija Cena="55000.00" DatumIsteka="2021-02-12" />
+    <Akcija Cena="56369.23" DatumIsteka="2021-04-29" />
+  </Proizvod>
+  <Proizvod>
+    <Kategorija>monitori</Kategorija>
+    <Cena valuta="RSD">
+      <iznos>12569.25</iznos>
+    </Cena>
+    <Oglas>
+      <TekstOglasa>TekstOglasa1</TekstOglasa>
+      <Tag>Računar</Tag>
+      <Tag>Tehnika</Tag>
+      <Tag>Samsung</Tag>
+    </Oglas>
+  </Proizvod>
+  <Proizvod>
+    <Kategorija>stolovi</Kategorija>
+    <Cena valuta="RSD">
+      <iznos>56369.23</iznos>
+    </Cena>
+    <Oglas>
+      <TekstOglasa>TekstOglasa1</TekstOglasa>
+      <Tag>Računar</Tag>
+      <Tag>Tehnika</Tag>
+      <Tag>Samsung</Tag>
+    </Oglas>
+    <Akcija Cena="125000.00" DatumIsteka="2021-02-26" />
+  </Proizvod>
+</VebProdavnica>
