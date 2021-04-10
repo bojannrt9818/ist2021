@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE VebProdavnica SYSTEM "projekatIST.dtd">
-<VebProdavnica>
+<VebProdavnica xmlns="http://tempuri.org/XMLSchema.xsd">
   <Proizvod>
     <Kategorija>laptopovi</Kategorija>
     <Cena valuta="RSD">
