@@ -1,0 +1,17 @@
+<!ELEMENT VebProdavnica (Proizvod)*>
+<!ATTLIST VebProdavnica
+		xmlns CDATA #REQUIRED>
+<!ELEMENT Proizvod (Kategorija|Cena|Oglas|Akcija)*>
+<!ELEMENT Kategorija (#PCDATA)>
+<!ELEMENT Cena (iznos)*>
+<!ATTLIST Cena
+		valuta CDATA #REQUIRED>
+<!ELEMENT iznos (#PCDATA)>
+<!ELEMENT Oglas (TekstOglasa|Tag)*>
+<!ELEMENT TekstOglasa (#PCDATA)>
+<!ELEMENT Tag (#PCDATA)>
+<!ELEMENT Akcija (#PCDATA)>
+<!ATTLIST Akcija
+		Cena CDATA #REQUIRED
+		DatumIsteka CDATA #REQUIRED>
+
