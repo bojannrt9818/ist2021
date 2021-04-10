@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="VebProdavnica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Proizvod" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="Proizvod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Kategorija" type="Kategorija"></xs:element>
+        <xs:element name="Cena" type="Cena"></xs:element>
+        <xs:element name="Oglas" type="Oglas"></xs:element>
+        <xs:element name="Akcija" type="Akcija" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:simpleType name="Kategorija">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="laptopovi"/>
+      <xs:enumeration value="monitori"/>
+      <xs:enumeration value="stolovi"/>
+      <xs:enumeration value="stolice"/>
+      <xs:enumeration value="tastature"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PositiveDecimal">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="Cena">
+    <xs:sequence>
+      <xs:element name="iznos" type="PositiveDecimal"/>
+    </xs:sequence>
+    <xs:attribute name="valuta" type="xs:string" default="RSD" use="optional"/>
+  </xs:complexType>
+
+  <xs:element name="TekstOglasa">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value = "10"/>
+        <xs:maxLength value = "180"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:element name="Tag" type="xs:string"></xs:element>
+  
+  <xs:complexType name="Oglas">
+    <xs:sequence>
+      <xs:element ref="TekstOglasa"/>
+      <xs:element ref="Tag" maxOccurs="5"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="DatumIsteka">
+    <xs:restriction base="xs:date">
+      <xs:minInclusive value="2021-01-01"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="Akcija">
+    <xs:attribute name="Cena" type="PositiveDecimal" use="required"/>
+    <xs:attribute name="DatumIsteka" type="DatumIsteka" use="required"/>
+  </xs:complexType>
+
+ 
+  
+</xs:schema>
